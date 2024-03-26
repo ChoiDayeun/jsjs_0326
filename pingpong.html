@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ping Pong Game</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+
+    .ping-pong-table {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        background-color: #b2babe;
+    }
+
+    .paddle {
+        position: absolute;
+        width: 10px;
+        height: 80px;
+        background-color: #cc3232;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    #left-paddle {
+        left: 0;
+        animation-name: move-left-paddle;
+    }
+
+    #right-paddle {
+        right: 0;
+        animation-name: move-right-paddle;
+    }
+
+    .ball {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #fffcbd;
+        border-radius: 50%;
+        animation: move-ball 2s linear infinite;
+    }
+
+    @keyframes move-left-paddle {
+        0%, 100% { top: 0; }
+        50% { top: 330px; }
+    }
+
+    @keyframes move-right-paddle {
+        0%, 100% { top: 330px; }
+        50% { top: 0; }
+    }
+
+    @keyframes move-ball {
+        0%, 100% { left: 0; top: 0; }
+        25% { left: 300px; top: 190px; }
+        50% { left: 600px; top: 0; }
+        75% { left: 300px; top: 190px; }
+        100% { left: 0; top: 0; }
+    }
+
+    .scoreboard {
+        position: absolute;
+        bottom: 180px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 24px;
+        color: #000000;
+        font-family: Arial Black, sans-serif; 
+    }
+</style>
+</head>
+<body>
+<div class="ping-pong-table">
+    <div id="left-paddle" class="paddle"></div>
+    <div id="right-paddle" class="paddle"></div>
+    <div class="ball"></div>
+</div>
+<div class="scoreboard">Player 1: 0 | Player 2: 0</div>
+</body>
+</html>

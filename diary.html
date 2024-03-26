@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Diary</title>
+<style>
+        @font-face {
+            font-family: 'Dahaengce';
+            src: url('nanum_dahaengce.ttf') format('truetype');
+        }
+
+    body {
+        font-family: 'Dahaengce' ;
+        margin: 0;
+        padding: 0;
+    }
+
+    .diary-entry {
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+        background-color: #f9f9f9;
+        overflow-y: auto; /* Add scrollbar if content exceeds viewport height */
+    }
+
+    .entry-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .entry-date {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .entry-section {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .section-content {
+        flex-grow: 1;
+    }
+
+    .section-image {
+        width: 133px;
+        height: 236px;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+
+    .section-text {
+        line-height: 1.6;
+    }
+</style>
+</head>
+<body>
+<div class="diary-entry">
+    <h1 class="entry-title">Today's Diary Entry</h1>
+    <p class="entry-date">March 20, 2024</p>
+    
+    <div class="entry-section">
+        <img class="section-image" src="paris.JPEG" alt="Image 1"> <!-- Moved the image before the section title -->
+        <div class="section-content">
+            <h2 class="section-title">Day 1: 에펠탑 앞에서 노가리</h2> <!-- Moved the section title after the image -->
+            <p class="section-text">
+                에펠탑 앞에서 먹은 바게뜨는 정말정말 맛있었다.
+            </p>
+        </div>
+    </div>
+
+    <div class="entry-section">
+        <img class="section-image" src="paris_disney.JPEG" alt="Image 2">
+        <div class="section-content">
+            <h2 class="section-title">Day 2: 파리 디즈니랜드</h2>
+            <p class="section-text">
+                파리 디즈니랜드에서 본 노을이다. 여기서 일루미네이션을 보면서 파이브 가이즈 햄버거를 먹었는데 진짜 맛있었다. 밤에 일루미네이션을 보고 감동받았다.
+            </p>
+        </div>
+    </div>
+
+    <div class="entry-section">
+        <img class="section-image" src="paris_night.JPEG" alt="Image 3">
+        <div class="section-content">
+            <h2 class="section-title">Day 3: 바토무슈 타기</h2>
+            <p class="section-text">
+                파리는 야경이 참 예쁜 도시인 것 같다.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
